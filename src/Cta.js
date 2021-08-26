@@ -10,24 +10,28 @@ const StyledCta = Styled.div`
     background-color: #7535fc;
     height: 36rem;
     color:white;
-    
-    img{
-
-        position:absolute;
-        z-index: 1;
-        height:36rem;
-    }
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
 
     h1{
         margin: 0;
-        padding: 0;
+        padding-top: 0;
         font-family: 'Bebas Neue', cursive;
         font-weight: normal;
         text-transform: uppercase;
-        padding:2rem;
         line-height: 77px;
-        font-size:64px;
-   
+        font-size: 64px;
+        text-align:center;
+        padding: 0 3rem;
+    }
+    h3{
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 24px;
+        font-weight:medium;
+        line-height:36px;
+        padding: 0 3rem;
     }
 `
 
