@@ -18,7 +18,7 @@ function App() {
       <Cta 
       header="got marketing? advance your business insight." 
       subHeader="Fill out the form and receive our award winning newsletter."/>
-      <SignUp/>
+      <SignUp />
     </div>
   );
 }
