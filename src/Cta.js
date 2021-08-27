@@ -7,7 +7,7 @@ console.log(CtaImage)
 const StyledCta = Styled.div`
 
     position:relative;
-    background-color: #7535fc;
+    background-image: url(${CtaImage}) no-repeat center;
     height: 36rem;
     color:white;
     display:flex;
@@ -34,7 +34,7 @@ const StyledCta = Styled.div`
         padding: 0 3rem;
     }
     @media (min-width: 1260px){
-        padding: 0;
+        
         height:100vh;
         justify-content:center;
         width:45vw;
