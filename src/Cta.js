@@ -33,6 +33,21 @@ const StyledCta = Styled.div`
         line-height:36px;
         padding: 0 3rem;
     }
+    @media (min-width: 1260px){
+        padding: 0;
+        height:100vh;
+        justify-content:center;
+        width:45vw;
+
+        h1{
+            padding: 0 12rem;
+            text-align:right;
+        }
+        h3{
+            text-align:right;
+            padding: 0 12rem;
+        }
+    }
 `
 
 const Cta = (props) => (

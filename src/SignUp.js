@@ -12,8 +12,6 @@ const StyledForm = Styled.div`
         margin-bottom: 0.8rem;
         font-size: 18px;
         font-weight:600;
-
-        
     }
     
     input{
@@ -25,6 +23,7 @@ const StyledForm = Styled.div`
         background-color: #EDEDED;
         font-size: 1.8rem;
     }
+
     @media(min-width: 800px){
         .textInput{
             display:flex;
@@ -34,7 +33,24 @@ const StyledForm = Styled.div`
             position:relative;
             width: 48%;
         }
-       
+     @media(min-width: 1260px){
+            padding: 0 5rem;
+            height: 100vh;
+            width: 55vw;
+            justify-content:center;
+            
+            label{
+                width:80%;
+            }
+           
+            .textInput{
+                padding: 0;
+                display: flex;
+                flex-direction:column;
+            }
+    
+        }
+
 
 
 `
@@ -52,7 +68,6 @@ const StyledButton = Styled.button`
             margin-top:0;
             display:block;
             width: 12rem;
-
         }
 
 `
