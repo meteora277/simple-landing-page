@@ -23,10 +23,18 @@ const StyledForm = Styled.div`
         margin-bottom: 2.5rem; 
         border: 1px solid #C7C7C7;
         background-color: #EDEDED;
+        font-size: 1.8rem;
     }
-    .textInput{
+    @media(min-width: 800px){
+        .textInput{
+            display:flex;
+            justify-content:space-between;
+        }
+        label{
+            position:relative;
+            width: 48%;
+        }
        
-    }
 
 
 `
@@ -66,10 +74,10 @@ const SignUp = (props) => {
             <StyledForm >
                 <div className="textInput">
                     
-                        <label className ="input" htmlFor="name">Name</label>
-                        <input type="text" name="name" value={data.name} onChange={handleChange}/>   
-                        <label className="input" htmlFor="email">Email</label>
-                        <input type="email" name="email" value={data.email} onChange={handleChange}/>
+                        <label htmlFor="name">Name
+                        <input type="text" name="name" value={data.name} onChange={handleChange}/></label>   
+                        <label htmlFor="email">Email
+                        <input type="email" name="email" value={data.email} onChange={handleChange}/></label>
                    
                  </div>
                 <StyledButton color="#5200FF" >Sign me up</StyledButton>
