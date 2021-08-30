@@ -14,18 +14,31 @@ const screenSize = {
 const StyledCta = Styled.div`
 
     position:relative;
-    background-color:blue;
+    background-color: rgba(82, 0, 255, 0.7);
     height: 36rem;
     color:white;
     display:flex;
     flex-direction: column;
     justify-content:space-evenly;
+
+    &:after{
+        content:" ";
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(${CtaImage}) no-repeat center;
+        opacity: 0.6;
+        z-index: -1;
+
+    }
     
     @media (min-width: 1260px){
         
         height:100vh;
         justify-content:center;
-        width:45vw;
+        width:60vw;
 
     }
 `
@@ -49,7 +62,7 @@ const StyledH1 = Styled.h1`
     }
 `
 
-const Styled_h3 = Styled.h3`
+const STYLED_H3 = Styled.h3`
 
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -67,7 +80,7 @@ const Styled_h3 = Styled.h3`
 const Cta = (props) => (
     <StyledCta>
         <StyledH1>{props.header}</StyledH1>
-        <Styled_h3>{props.subHeader}</Styled_h3>
+        <STYLED_H3>{props.subHeader}</STYLED_H3>
     </StyledCta>
 )
 export default Cta

@@ -36,7 +36,7 @@ const StyledForm = Styled.div`
      @media(min-width: 1260px){
             padding: 0 5rem;
             height: 100vh;
-            width: 55vw;
+            width: 50vw;
             justify-content:center;
             
             label{
