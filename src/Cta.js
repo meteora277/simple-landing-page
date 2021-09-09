@@ -1,15 +1,13 @@
-import React from 'react';
-import Styled from 'styled-components'
-import CtaImage from './cta-image.jpg'
+import React from "react";
+import Styled from "styled-components";
+import CtaImage from "./cta-image.jpg";
 
-console.log(CtaImage)
+console.log(CtaImage);
 
 const screenSize = {
-    lg:"1260px",
-    md:"800px"
-}
-
-
+  lg: "1260px",
+  md: "800px",
+};
 
 const StyledCta = Styled.div`
 
@@ -41,7 +39,7 @@ const StyledCta = Styled.div`
         width:60vw;
 
     }
-`
+`;
 const StyledH1 = Styled.h1`
 
     margin: 0;
@@ -60,7 +58,7 @@ const StyledH1 = Styled.h1`
         text-align:right;
     
     }
-`
+`;
 
 const STYLED_H3 = Styled.h3`
 
@@ -75,12 +73,12 @@ const STYLED_H3 = Styled.h3`
         text-align:right;
         padding: 0 12rem;
     }
-`
+`;
 
 const Cta = (props) => (
-    <StyledCta>
-        <StyledH1>{props.header}</StyledH1>
-        <STYLED_H3>{props.subHeader}</STYLED_H3>
-    </StyledCta>
-)
-export default Cta
+  <StyledCta>
+    <StyledH1>{props.header}</StyledH1>
+    <STYLED_H3>{props.subHeader}</STYLED_H3>
+  </StyledCta>
+);
+export default Cta;

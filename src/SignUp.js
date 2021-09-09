@@ -1,5 +1,5 @@
-import React, {useState} from 'react';  
-import Styled from 'styled-components'
+import React, { useState } from "react";
+import Styled from "styled-components";
 
 const StyledForm = Styled.div`
     position:relative;
@@ -53,10 +53,10 @@ const StyledForm = Styled.div`
 
 
 
-`
+`;
 const StyledButton = Styled.button`
     display: block;
-    background-color: ${props => props.color};
+    background-color: ${(props) => props.color};
     color:white;
     border:none;
     height:4rem;
@@ -70,36 +70,43 @@ const StyledButton = Styled.button`
             width: 12rem;
         }
 
-`
+`;
 
+const SignUp = (props) => {
+  const [data, setData] = useState({ name: "", email: "" });
 
-const SignUp = (props) => { 
+  function handleChange(event) {
+    event.preventDefault();
+    setData((prev) => ({ ...prev, [event.target.name]: event.target.value }));
+  }
 
-    const [data, setData] = useState({name:"", email:""})
-    
-
-    function handleChange(event){
-        event.preventDefault()
-        setData(prev => ({...prev, [event.target.name]:event.target.value}))
-    }
-   
-    
-    return (
-        <div>
-            <StyledForm >
-                <div className="textInput">
-                    
-                        <label htmlFor="name">Name
-                        <input type="text" name="name" value={data.name} onChange={handleChange}/></label>   
-                        <label htmlFor="email">Email
-                        <input type="email" name="email" value={data.email} onChange={handleChange}/></label>
-                   
-                 </div>
-                <StyledButton color="#5200FF" >Sign me up</StyledButton>
-                {console.log(data)}
-            </StyledForm>
+  return (
+    <div>
+      <StyledForm>
+        <div className="textInput">
+          <label htmlFor="name">
+            Name
+            <input
+              type="text"
+              name="name"
+              value={data.name}
+              onChange={handleChange}
+            />
+          </label>
+          <label htmlFor="email">
+            Email
+            <input
+              type="email"
+              name="email"
+              value={data.email}
+              onChange={handleChange}
+            />
+          </label>
         </div>
-
-    )   
-}
-export default SignUp
+        <StyledButton color="#5200FF">Sign me up</StyledButton>
+        {console.log(data)}
+      </StyledForm>
+    </div>
+  );
+};
+export default SignUp;
